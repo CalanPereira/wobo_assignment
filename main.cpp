@@ -11,7 +11,7 @@ VideoCapture cap("vedio.mp4", cv::CAP_MSMF);
 VideoWriter writer; 
 writer.open("appsrc ! videoconvert ! videoscale ! video/x-raw,width=640,height=480
             ! x264enc speed-preset=veryfast tune=zerolatency bitrate=800 !
-             rtspclientsink location=rtsp://localhost:8554/mystream ",
+             rtspclientsink location=rtsp://localhost:3000/mystream ",
               0, 20, Size(640, 480), true);
 Detector dec = Detector();
 Mat img;
